@@ -15,7 +15,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Work+Sans:ital,wght@0,600;0,700;0,800;1,300;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/micro-slider.css">    
     <link rel="stylesheet" href="css/main-rtl.css">
+    
 </head>
 
 <body>
@@ -240,9 +242,8 @@
                     </div>
                     
                 </div>
-                <div class="col-md-6 col-sm-12" style="visibility: visible; animation-delay: 2s;">
-                    <iframe width="350px" height="250px" src="https://www.youtube.com/watch?v=YgyebYbZdIs&t=3s" frameborder="0"></iframe>
-                    <!-- <video src="https://www.youtube.com/watch?v=YgyebYbZdIs&t=3s"></video> -->
+                <div class="col-md-6 col-sm-12 pt-3" style="visibility: visible; animation-delay: 2s;">
+                    <iframe width="300" height="250" src="https://www.youtube.com/embed/YgyebYbZdIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-right: 30%;"></iframe>
                 </div>
             </div>
         </div>
@@ -264,27 +265,33 @@
                     <div class="twitter">
                         <a  class="twitter-timeline" href="https://twitter.com/SeecSaudi?ref_src=twsrc%5Etfw">Tweets by SeecSaudi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                   
                 </div>
             </div>
         </div>
     </div>
     <!-- End news section -->
     <!-- Start microslider -->
-    <div class="micro-slider">
-        <div class="container">
-            <h5>شركائنا</h5>
-            <!-- <div class="slider-wrapper">
-                <div class="inner-wrapper">
-                    <div class="slide"><img width="100%" src="./images/logo2.png" alt=""></div>
-                    <div class="slide"><img width="100%" src="./images/logo3.png" alt=""></div>
-                    <div class="slide"><img width="100%" src="./images/004.png" alt=""></div>
-                    <div class="slide"><img width="100%" src="./images/logo5.png" alt=""></div>
-                    <div class="slide"><img width="100px" height="100px" src="./images/006.png" alt=""></div>
-                </div>
-            </div> -->
+    <div id="micro-slider">
+        <section>
+            <div class="section-header">
+                <h5>شركاؤنا</h5>
+            </div>
+            <div class="micro-slider">
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo2.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo3.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo5.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo4.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo6.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo7.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo8.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo9.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo11.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo12.png" alt=""></div>
+                <div class="slider-item s"><img width="100%" height="70%" src="./images/logo1.png" alt=""></div>
+            </div>
+        </section>
         </div>
-    </div>
+    
     <!-- End microslider -->
     <!-- Start footer -->
     <div class="footer">
@@ -312,7 +319,7 @@
                         <li><a href=""> مكتبة الصور</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-sm-12">
+                <div class="col-lg-2 col-sm-12">
                     <h4>تــابعنا علي</h4>
                     <div class="icons">
                         <a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -322,7 +329,7 @@
                     
                 </div>
                 <div class="col-md-3 col-sm-12">
-                    <a target="_blank" href="https://www.google.com/maps/place/Saudi+Energy+Efficiency+Center+(SEEC)/@24.742188,46.633188,14z/data=!4m5!3m4!1s0x0:0x2e1c622ab73174fb!8m2!3d24.7421875!4d46.6331875?hl=ar">
+                    <a target="_blank" href="https://goo.gl/maps/kHrAuJjzbvqncPKJA">
                         <img src="./images/map-2x.png" width="200px" height="125px" alt="Map@2X">
                     </a>
                 </div>
@@ -350,7 +357,16 @@
         <script src="js/swiper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/hammer.min.js"></script>
         <script src="js/main-rtl.js"></script>
+        <script src="js/micro-slider.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                new MicroSlider('.micro-slider', { indicators: true, indicatorText: '' });
+                new MicroSlider('.micro-slider.no-wrap', { indicators: true, indicatorText: '', noWrap: true });
+                new MicroSlider('.micro-slider.fullwidth', { indicators: true, indicatorText: '', fullWidth: true });
+            }
+        </script>
 </body>
 
 </html>
